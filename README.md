@@ -66,16 +66,16 @@ ________________________________________________________________________________
 Her düğüm (node), 'content' işaretçisi (pointer) ile bir veriye işaret eder ve bir sonraki düğüm 'next' işaretçisi (pointer) ile bağlanır. 
 
  <b> struct: </b> <br>
- Farklı veri türlerini bir araya getirerek yeni bir veri yapısı oluşturmayı sağlayan bir programlama terimidir.
+ <sup> Farklı veri türlerini bir araya getirerek yeni bir veri yapısı oluşturmayı sağlayan bir programlama terimidir.
 
  <b> typedef: </b> <br>
- Mevcut bir veri türüne daha anlamlı bir isim atamayı sağlayan bir programlama terimidir.
+  <sup> Mevcut bir veri türüne daha anlamlı bir isim atamayı sağlayan bir programlama terimidir.
 
  <b> content: </b> <br>
- Elementin içerdiği veri. void * tipi her tür veriyi tutmanızı sağlar
+ <sup> Elementin içerdiği veri. void * tipi her tür veriyi tutmanızı sağlar
  
   <b> next: </b> <br>
- Bir sonraki elementin adresini tutar. Eğer son elemensa NULL değerindedir.
+ <sup> Bir sonraki elementin adresini tutar. Eğer son elemensa NULL değerindedir.
  
  <b> Node: </b> <br>
  <sup>"node" veya diğer adıyla "düğüm", veri saklamak için kullanılan bir kutucuktur. Özellikle veri yapıları oluştururken  kullanılır. Örneğin, bir liste yapısında her "düğüm", veriyi tutar ve bir sonraki düğümün nerede olduğunu gösterir. Bu sayede veriler düzenli bir şekilde bağlanabilir.<sup>
