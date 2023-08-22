@@ -78,7 +78,7 @@ Her düğüm (node), 'content' işaretçisi (pointer) ile bir veriye işaret ede
  Bir sonraki elementin adresini tutar. Eğer son elemensa NULL değerindedir.
  
  <b> Node: </b> <br>
- <sup>C programlama dilinde "node" veya diğer adıyla "düğüm", veri saklamak için kullanılan bir kutucuktur. Özellikle veri yapıları oluştururken  kullanılır. Örneğin, bir liste yapısında her "düğüm", veriyi tutar ve bir sonraki düğümün nerede olduğunu gösterir. Bu sayede veriler düzenli bir şekilde bağlanabilir.<sup>
+ <sup>"node" veya diğer adıyla "düğüm", veri saklamak için kullanılan bir kutucuktur. Özellikle veri yapıları oluştururken  kullanılır. Örneğin, bir liste yapısında her "düğüm", veriyi tutar ve bir sonraki düğümün nerede olduğunu gösterir. Bu sayede veriler düzenli bir şekilde bağlanabilir.<sup>
  
  	+------------------+      +------------------+      +------------------+
   	|      content     | ---> |      content     | ---> |      content     |
