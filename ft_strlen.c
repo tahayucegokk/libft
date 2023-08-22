@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muyucego <muyucego@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/18 02:45:18 by muyucego          #+#    #+#             */
-/*   Updated: 2023/08/23 01:16:32 by muyucego         ###   ########.fr       */
+/*   Created: 2023/08/20 21:23:41 by muyucego          #+#    #+#             */
+/*   Updated: 2023/08/23 01:15:53 by muyucego         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
 
-int		ft_atoi(const char *str);
-size_t	ft_strlen(const char *str);
-int		ft_isalnum(int c);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-
-#endif
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
