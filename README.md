@@ -62,8 +62,14 @@ ________________________________________________________________________________
     }					t_list;
 
 
-Her düğüm (node), 'content' işaretçisi (pointer) ile bir veriye işaret eder ve bir sonraki düğüm 'next' işaretçisi (pointer) ile bağlanır. 
 
+Her düğüm (node), 'content' işaretçisi (pointer) ile bir veriye işaret eder ve bir sonraki düğüm 'next' işaretçisi (pointer) ile bağlanır. 
+ <b> content: </b> <br>
+ Elementin içerdiği veri. void * tipi her tür veriyi tutmanızı sağlar
+ 
+  <b> next: </b> <br>
+ Bir sonraki elementin adresini tutar. Eğer son elemensa NULL değerindedir.
+ 
  <b> Node: </b> <br>
  <sup>C programlama dilinde "node" veya diğer adıyla "düğüm", veri saklamak için kullanılan bir kutucuktur. Özellikle veri yapıları oluştururken  kullanılır. Örneğin, bir liste yapısında her "düğüm", veriyi tutar ve bir sonraki düğümün nerede olduğunu gösterir. Bu sayede veriler düzenli bir şekilde bağlanabilir.<sup>
  
