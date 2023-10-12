@@ -1,47 +1,22 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: muyucego <muyucego@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/08/18 01:52:01 by muyucego          #+#    #+#              #
-#    Updated: 2023/08/18 01:54:34 by muyucego         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = libft.a
 FLAG = -Wall -Wextra -Werror
-SRC = $(shell find . -name "ft_*.c" -not -name "ft_lst*.c")
-BONUS = $(shell find . -name "ft_lst*.c")
-
+SRC =  ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_memset.c ft_strlen.c ft_putchar_fd.c ft_toupper.c ft_tolower.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_strncmp.c ft_strrchr.c ft_strchr.c ft_memcmp.c
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME):
 	@echo "\033[0;92m\nLoading"
-	@sleep 1
-	@echo -n "."
-	@sleep 1
-	@echo -n "..."
-	@sleep 1
 	@echo "\033[0m"
 	gcc $(FLAG) -c $(SRC)
-	ar rc $(NAME) *.o
-bonus:
-	gcc $(FLAG) -c $(BONUS)
-	ar rc $(NAME) *.o
+	ar rc $(NAME) $(OBJ)
 clean:
 	@echo "\033[0;91m\nCleaning"
-	@echo -n "."
-	@sleep 1
-	@echo -n "..."
-	@sleep 1
 	@echo "\033[0m"
-	/bin/rm -f  *.o
+	/bin/rm -f $(OBJ)
 fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all re clean fclean 
