@@ -6,7 +6,7 @@
 /*   By: muyucego <muyucego@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 14:23:09 by muyucego          #+#    #+#             */
-/*   Updated: 2023/10/10 18:53:33 by muyucego         ###   ########.fr       */
+/*   Updated: 2023/10/14 06:40:39 by muyucego         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
 
-	i = len;
 	if (dst == NULL && src == NULL)
-		return (0);
-	if (dst == src)
-		return (dst);
-	else if (dst > src)
+		return (NULL);
+	i = len;
+	if (dst < src)
+		return (ft_memcpy(dst, src, len));
+	if (dst > src)
 	{
 		while (i-- > 0)
-			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+			((unsigned char *) dst)[i] = ((unsigned char *) src)[i];
 	}
-	else
-		ft_memcpy(dst, src, len);
 	return (dst);
 }
