@@ -1,42 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muyucego <muyucego@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/14 02:29:31 by muyucego          #+#    #+#             */
-/*   Updated: 2023/10/16 14:46:41 by muyucego         ###   ########.fr       */
+/*   Created: 2023/10/16 14:47:41 by muyucego          #+#    #+#             */
+/*   Updated: 2023/10/16 17:15:00 by muyucego         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	j;
-	size_t	len1;
-	size_t	len2;
-	char	*dest;
+	size_t		size;
+	size_t		i;
+	size_t		j;
+	char		*dest;
 
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	dest = (char *)malloc(len1 + len2 + 1);
+	size = ft_strlen(s1);
 	i = 0;
-	j = 0;
-	if (!dest)
+	j = -1;
+	if (!s1 || !set)
 		return (NULL);
-	while (s1[i])
-	{
-		dest[i] = ((char *)s1)[i];
+	while (ft_strchr(set, s1[i]) && i < size)
 		i++;
-	}
-	while (s2[j])
-	{
-		dest[i + j] = ((char *)s2)[j];
-		j++;
-	}
-	dest[i + j] = '\0';
+	if (i == size)
+		return (ft_strdup(""));
+	while (ft_strchr(set, s1[size - 1]) && size > 0)
+		size--;
+	dest = (char *)malloc (size - i + 1);
+	if (dest == NULL)
+		return (NULL);
+	while ((i + ++j) < size)
+		dest[j] = s1[i + j];
+	dest[j] = '\0';
 	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: muyucego <muyucego@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 03:33:46 by muyucego          #+#    #+#             */
-/*   Updated: 2023/10/14 05:49:05 by muyucego         ###   ########.fr       */
+/*   Updated: 2023/10/16 14:17:44 by muyucego         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
-	if (start > ft_strlen(s) - 1)
+	if (start > (unsigned int)ft_strlen(s))
 		return (ft_strdup(""));
-	if (len > ft_strlen(s))
-		len = ft_strlen(s);
+	if (len > (unsigned int)ft_strlen(s + start))
+		len = (unsigned int)ft_strlen(s + start);
 	cpy = (char *)malloc(sizeof(char) * len + 1);
 	if (cpy == NULL || !s)
 		return (NULL);
