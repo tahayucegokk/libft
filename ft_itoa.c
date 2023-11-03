@@ -6,13 +6,13 @@
 /*   By: muyucego <muyucego@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 18:59:23 by muyucego          #+#    #+#             */
-/*   Updated: 2023/10/14 00:08:26 by muyucego         ###   ########.fr       */
+/*   Updated: 2023/10/21 15:45:01 by muyucego         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_digit(int n)
+static	int	ft_digit(int n)
 {
 	int	digit;
 

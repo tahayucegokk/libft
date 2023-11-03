@@ -6,12 +6,11 @@
 /*   By: muyucego <muyucego@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 15:41:44 by muyucego          #+#    #+#             */
-/*   Updated: 2023/10/13 15:55:51 by muyucego         ###   ########.fr       */
+/*   Updated: 2023/10/21 15:46:47 by muyucego         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putendl_fd(char *s, int fd)
 {

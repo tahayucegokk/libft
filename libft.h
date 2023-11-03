@@ -6,7 +6,7 @@
 /*   By: muyucego <muyucego@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 02:45:18 by muyucego          #+#    #+#             */
-/*   Updated: 2023/10/16 17:21:45 by muyucego         ###   ########.fr       */
+/*   Updated: 2023/10/21 16:19:08 by muyucego         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
@@ -31,10 +37,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t size);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -48,4 +56,5 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
+t_list	*ft_lstnew(void *content);
 #endif
